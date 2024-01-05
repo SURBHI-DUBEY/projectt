@@ -24,7 +24,7 @@
       <li><a href="#">Contact</a></li>
      </ul>
   </nav>
-  <!-- home section-------------------->
+  <!-- home section-------------------------------------------------------->
   <section class="home" id="home">
     <div class="header-text">
       <h3>Hello,Its's Me</h3>
@@ -48,7 +48,7 @@
   
 </div>
 </div>
-<!--------------------- about------------------------------->
+<!--------------------- about---------------------------------------------------------->
 
 <div id="about">
   <div class="container">
@@ -65,17 +65,123 @@
                  uptates illo unde magnam consectetur?</p>
           
                   <div class="tab-titles">
-                      <p class="tab-links active-link">Skills</p>
-                      <p class="tab-links">Experience</p>
-                      <p class="tab-links">Education</p>
+                      <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                      <p class="tab-links" onclick="opentab(event,'education')">Education</p>
                   </div>
-                  <div>
+<!-----------------------skills----------------------->
+                  <div class="tab-contents active-tab" id="skills">
+                    <div class="col1-col2">
+                      <div class="technical-skills">
+                        <ul>
+                          <span class="skill">Technical Skills</span><br><br>
+                          <li><span>UI Creation</span><br>Desining Web Interface</li>
+                          <li><span>Web Languages</span><br>JavaScript : 40% <br>React : 20% <br> HTML/CSS : 75%</li>
+                          <li><span>Programming Languages</span><br>Java : 60% <br>c++ : 40%  <br> c : 40%</li>
+                          <li><span>Database</span><br>SQl</li>
+                        </ul>
+                        
+                      </div>
+                      <div class="Professional-skills">
+                        <ul>
+                          <span class="skill">Professional Skills</span><br><br>
+                          <li><span>Interpersonal skills</span><br>I excel in building meaningful connections and fostering positive relationships through effective communication, empathy, and active listening.</li>
+                          <li><span>Collaboration & Teamwork</span><br>I thrive in fostering synergy within teams, ensuring a harmonious collaboration that maximizes our collective potential.</li>
+                          <li><span>Creative and Resouecefull</span><br>I am highly innovative, often devising resourceful solutions, such as implementing a streamlined process that significantly improved project efficiency.</li>
+                        </ul>
+                      </div> 
 
+                    </div>
+                    
                   </div>
-                  
-       </div>
+<!--------------------------experience----------------------->
+                  <div class="tab-contents" id="experience">
+                      <ul>
+                        <li><span class="skill">Internship, ConsultIT Technologies Pvt Ltd.</span><br>
+                          <span class="date">Oct,2022 - Nov,2022</span>
+                        <br><br>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing <br>
+                          nbvhddtfftkdmjdcgffuhcdxggcghddtfhdftkgfkgcgchff </p>
+                          
+                      </ul>
+                    </div>
+<!---------------------------education------------------------->
+                    <div class="tab-contents" id="education">
+                      <ul>
+                        <li><span class="skill">Bchelor Of Computer Application-IT</span><br>
+                        <span class="date">2020 - 2023</span><br>
+                        <p>I earned my bachelor's degree from Netaji Subhas University (NSU) with 
+                          a cumulative grade point average (CGPA) of 9.0</p>
+
+                          <li><span class="skill">Intermediate-Science</span><br>
+                            <span class="date">2019 - 2020</span><br>
+                            <p>I completed my intermediate studies in the Science stream at Jamshedpur Women's College, 
+                              securing a grade of 63%.</p>
+
+                            <li><span class="skill">Matriculation</span><br>
+                              <span class="date">2018</span><br>
+                              <p>I successfully completed my Matriculation from St. Mary's Hindi High School, attaining a grade of 86%.</p>
+                        
+                      </ul>
+                    </div>
+          </div>
     </div>
   </div>
 </div>
+<!----------------------------services----------------------------------------------------->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>UI Design</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+           Tempore provident a laborum explicabo eius velit, molestias sed minus et de
+           serunt. Natus velit quas ullam nemo hic cumque? Autem, consequatur perspiciatis!
+          </p>
+          <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-dev"></i>
+        <h2>Frontend Development</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+           Tempore provident a laborum explicabo eius velit, molestias sed minus et de
+           serunt. Natus velit quas ullam nemo hic cumque? Autem, consequatur perspiciatis!
+          </p>
+          <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-display"></i>
+        <h2>UI Design</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+           Tempore provident a laborum explicabo eius velit, molestias sed minus et de
+           serunt. Natus velit quas ullam nemo hic cumque? Autem, consequatur perspiciatis!
+          </p>
+          <a href="#">Learn more</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-------------------------portfolio---------------------------------------------------------------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/mywork-1.jpg" >
+      </div>
+      <div class="work">
+        <img src="images/mywork-2.jpg" >
+      </div>
+      <div class="work">
+        <img src="images/mywork-3.jpg" >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="portfolio.js"></script>
 </body>
 </html>
