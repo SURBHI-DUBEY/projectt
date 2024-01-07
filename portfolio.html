@@ -11,21 +11,23 @@
 </head>
 
 <body>
-  <!-- ------head---------- -->
+  <!-- ------head------------------------------------------- -->
 <div id="header">
 <div class="container">
   <nav>
      <img src="images/logo.png" alt="logo">
-     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">portfolio</a></li>
-      <li><a href="#">Contact</a></li>
+     <ul id="sidemenu">
+      <li><a href="#header">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <i class="fa-solid fa-xmark"  onclick="closemenu()"></i>
      </ul>
+     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
   </nav>
-  <!-- home section-------------------------------------------------------->
-  <section class="home" id="home">
+  <!-- home section---------------------------------------------------------------------------->
+  
     <div class="header-text">
       <h3>Hello,Its's Me</h3>
       <h1>Surbhi Dubey</h1>
@@ -34,18 +36,12 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         <br> Aliquam saepe omnis natus quasi  </p>
       <div class="social-media">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/surbhi-dubey-55163422b/"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
       </div>  
-      <a href="images/surbhi-resumee.pdf" class="btn">Download CV</a>
-    </div>
-    <div class="home-image">
-      <img src="images/surbhiphoto.png" alt="">
-    </div>
-
-  </section>
-  
+      <a target="_blank" href="images/surbhi-resumee.pdf" download="Surbhi Resume" class="btnn"> Download CV</a>
+    </div>  
 </div>
 </div>
 <!--------------------- about---------------------------------------------------------->
@@ -101,7 +97,8 @@
                           <span class="date">Oct,2022 - Nov,2022</span>
                         <br><br>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing <br>
-                          nbvhddtfftkdmjdcgffuhcdxggcghddtfhdftkgfkgcgchff </p>
+                          nbvhddtfftkdmjdcgffuhcdxggcghddtfhdftkgfkgcgchff </p><br>
+                          <a target="_blank" href="images/Internship completed Letter Surbhi Dubey (2).pdf" download="Internship Completion Certificate" class="btnn"> Download Certificate</a>
                           
                       </ul>
                     </div>
@@ -173,20 +170,92 @@
         <img src="images/mywork-1.jpg" >
         <div class="layer">
           <h3>Carster</h3>
-          <p>A car selling webpage where user can choose more than thousand sopersonic cars for them...</p>
+          <p>A car selling webpage where user can choose more than thousand Supersonic cars for them...</p>
           <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
       <div class="work">
         <img src="images/mywork-2.jpg" >
+        <div class="layer">
+          <h3>Portfolio</h3>
+          <p>Crafting digital experiences through innovative design and code - my portfolio showcases a fusion of creativity, technical proficiency, 
+            and a passion for delivering impactful solutions.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
       <div class="work">
         <img src="images/mywork-3.jpg" >
+        <div class="layer">
+          <h3>Woking on...</h3>
+          <p>The project is under process...</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+
+<!--------------------------------------contact---------------------------------------------->
+
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-envelope"></i> surbhid.14@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 7480076895</p>
+        <div class="social-icons">
+          <a target="_blank" href="https://www.linkedin.com/in/surbhi-dubey-55163422b/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" id=""  rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+         <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Surbhi.</p>
   </div>
 </div>
 
 <script src="portfolio.js"></script>
+<script>
+  var sidemenu=document.getElementById("sidemenu");
+
+function openmenu(){
+  sidemenu.style.right="0";
+}
+function closemenu(){
+  sidemenu.style.right="-200px";
+}
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_2PpZsWpbm3vhmOE24HR8Se0183Z7G5nhEEQrhrbff0MEVqlIgnYXQvGoRWhSOtLk/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
